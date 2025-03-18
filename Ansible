@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Chechout') {
+            steps {
+                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/muraribollineni/An-automated-infrastructure-using-terraform-anisible-and-jenkins']])
+            }
+        }
+        stage("Excute ansible"){
+            steps{
+                sh "pip install --upgrade requests==2.20.1"
+                ansiblePlaybook playbook: 'create-ec2.tf'
+            }
+        }
+    }
+}
