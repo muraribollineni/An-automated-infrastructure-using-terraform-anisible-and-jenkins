@@ -1,0 +1,29 @@
+Started by user MURARI NAGA PRASAD BOLLINENI
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\MyAnsiblePipeline
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Chechout)
+[Pipeline] checkout
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\MyAnsiblePipeline\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/muraribollineni/An-automated-infrastructure-using-terraform-anisible-and-jenkins # timeout=10
+Fetching upstream changes from https://github.com/muraribollineni/An-automated-infrastructure-using-terraform-anisible-and-jenkins
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.47.1.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/muraribollineni/An-automated-infrastructure-using-terraform-anisible-and-jenkins +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 2830214947d30ffe3cd30b7e6edbe0fe40ffc937 (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 2830214947d30ffe3cd30b7e6edbe0fe40ffc937 # timeout=10
+Commit message: "THIS IS AN TERRAFORM FILE "
+ > git.exe rev-list --no-walk 2830214947d30ffe3cd30b7e6edbe0fe40ffc937 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
